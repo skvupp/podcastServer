@@ -1,4 +1,4 @@
-<? 
+<?php
 use Auth0\SDK\JWTVerifier;
 use Auth0\SDK\Helpers\Cache\FileSystemCacheHandler;
 
