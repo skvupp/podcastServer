@@ -1,3 +1,4 @@
+<? 
 use Auth0\SDK\JWTVerifier;
 use Auth0\SDK\Helpers\Cache\FileSystemCacheHandler;
 
@@ -8,3 +9,4 @@ $verifier = new JWTVerifier([
 ]);
 
 $decoded = $verifier->verifyAndDecode($token);
+?>
