@@ -1,6 +1,29 @@
 import fetch from "node-fetch";
 import {Response, Request} from "express";
 
+
+function downloadFile(filename: string, res: Response) {
+    const file = `${__dirname}/files/${filename}`;
+    res.download(file);
+}
+
+
+export function protectedEpisode(req: Request, res: Response){
+    downloadFile('test_pod.mp3', res)
+}
+
+export function nonProtectedEpisode(req: Request, res: Response){
+    downloadFile("lydspor.mp3",res);
+}
+
+export function rss(req: Request, res: Response){
+    downloadFile("rss.xml",res);
+}
+
+export function profilePicture(req: Request, res: Response){
+    downloadFile("profil.jpg",res);
+}
+
 export async function registrationPage(req: Request, res: Response) {
     const url = `https://${process.env.AUTH0_DOMAIN}/oauth/token`
     var options = {
@@ -9,7 +32,7 @@ export async function registrationPage(req: Request, res: Response) {
         body: JSON.stringify({
             client_id: process.env.CLIENT_ID,
             client_secret: process.env.CLIENT_SECRET,
-            audience:`https://${process.env.AUTH0_DOMAIN}/api/v2/`,
+            audience: process.env.AUDIENCE,
             grant_type:"client_credentials"
         })
     }
