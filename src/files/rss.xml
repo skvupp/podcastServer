@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:anchor="https://anchor.fm/xmlns">
+	<channel>
+		<title><![CDATA[Testpodden]]></title>
+		<description><![CDATA[A podcast where some episodes are open and others need authorization]]></description>
+		<link>https://skvupp.com/</link>
+		<image>
+			<url>http://localhost:8080/profile</url>
+			<title>Testpodden</title>
+			<link>https://skvupp.com/</link>
+		</image>
+		<generator>Podcastplayer</generator>
+		<lastBuildDate>Wed, 01 Jun 2022 07:20:03 GMT</lastBuildDate>
+		<atom:link href="https://anchor.fm/s/84ca3aa8/podcast/rss" rel="self" type="application/rss+xml"/>
+		<author><![CDATA[Yngve Vindal Eriksen]]></author>
+		<copyright><![CDATA[Yngve Vindal Eriksen]]></copyright>
+		<language><![CDATA[nb]]></language>
+		<atom:link rel="hub" href="https://pubsubhubbub.appspot.com/"/>
+		<itunes:author>Yngve Vindal Eriksen</itunes:author>
+		<itunes:summary>A podcast where some episodes are open and others need authorization</itunes:summary>
+		<itunes:type>episodic</itunes:type>
+		<itunes:owner>
+			<itunes:name>Yngve Vindal Eriksen</itunes:name>
+			<itunes:email>yngve@itkode.no</itunes:email>
+		</itunes:owner>
+		<itunes:explicit>No</itunes:explicit>
+		<itunes:category text="Society &amp; Culture"/>
+		<itunes:image href="http://localhost:8080/profile"/>
+		<item>
+			<title><![CDATA[Open episode]]></title>
+			<description><![CDATA[<p>A closed episode</p>]]></description>
+			<link>http://localhost:8080/</link><!-- Link to registration page -->
+			<itunes:protected>Yes</itunes:protected><!-- Property added tells the app reader this episode is protected -->
+			<guid isPermaLink="false">e7b49dbc-43b1-46d6-9a74-c1a92c920dd0</guid>
+			<dc:creator><![CDATA[Yngve Vindal Eriksen]]></dc:creator>
+			<pubDate>Fri, 13 May 2022 03:00:09 GMT</pubDate>
+			<enclosure url="http://localhost:8080/open" type="audio/mpeg" />
+			<itunes:summary>Free and open episode</itunes:summary>
+			<itunes:explicit>No</itunes:explicit>
+			<itunes:duration>3480</itunes:duration>
+			<itunes:image href="http://localhost:8080/profile"/>
+			<itunes:season>1</itunes:season>
+			<itunes:episode>1</itunes:episode>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title><![CDATA[Open episode]]></title>
+			<description><![CDATA[<p>A protected episode</p>]]></description>
+			<link></link>
+			<guid isPermaLink="false">e7b49dbc-43b1-46d6-9a74-c1a92c920dd0</guid>
+			<dc:creator><![CDATA[Yngve Vindal Eriksen]]></dc:creator>
+			<pubDate>Fri, 13 May 2022 03:00:09 GMT</pubDate>
+			<enclosure url="http://localhost:8080/protected" type="audio/mpeg"/>
+			<itunes:summary>Closed episode. Need authorization</itunes:summary>
+			<itunes:explicit>No</itunes:explicit>
+			<itunes:duration>3480</itunes:duration>
+			<itunes:image href="http://localhost:8080/profile"/>
+			<itunes:season>1</itunes:season>
+			<itunes:episode>2</itunes:episode>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+	</channel>
+</rss>
