@@ -45,7 +45,7 @@
 		<item>
 			<title><![CDATA[Open episode]]></title>
 			<description><![CDATA[<p>A protected episode</p>]]></description>
-			<link></link>
+			<link>http://localhost:8080/</link>
 			<guid isPermaLink="false">e7b49dbc-43b1-46d6-9a74-c1a92c920dd0</guid>
 			<dc:creator><![CDATA[Yngve Vindal Eriksen]]></dc:creator>
 			<pubDate>Fri, 13 May 2022 03:00:09 GMT</pubDate>
@@ -56,7 +56,7 @@
 			<itunes:image href="http://localhost:8080/profile"/>
 			<itunes:season>1</itunes:season>
 			<itunes:episode>2</itunes:episode>
-			<itunes:episodeType>full</itunes:episodeType>
+			<itunes:episodeType>protected</itunes:episodeType>
 		</item>
 	</channel>
 </rss>
