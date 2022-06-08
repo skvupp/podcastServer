@@ -43,7 +43,7 @@
 			<itunes:episodeType>full</itunes:episodeType>
 		</item>
 		<item>
-			<title><![CDATA[Open episode]]></title>
+			<title><![CDATA[Protected episode]]></title>
 			<description><![CDATA[<p>A protected episode</p>]]></description>
 			<link>http://localhost:8080/</link>
 			<guid isPermaLink="false">e7b49dbc-43b1-46d6-9a74-c1a92c920dd0</guid>
