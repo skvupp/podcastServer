@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:anchor="https://anchor.fm/xmlns">
+<?rss version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:anchor="https://anchor.fm/xmlns">
 	<channel>
 		<title><![CDATA[Testpodden]]></title>
-		<description><![CDATA[A podcast where some episodes are open and others need authorization]]></description>
+		<description><![CDATA[A podcast where some episodes are open and others need authorization. This is an example on how you can put
+		authorization on some or all episodes in the same podcast channel, and still follow the RSS standard.]]></description>
 		<link>https://skvupp.com/</link>
 		<image>
 			<url>http://localhost:8080/profile</url>
@@ -16,7 +17,9 @@
 		<language><![CDATA[nb]]></language>
 		<atom:link rel="hub" href="https://pubsubhubbub.appspot.com/"/>
 		<itunes:author>Yngve Vindal Eriksen</itunes:author>
-		<itunes:summary>A podcast where some episodes are open and others need authorization</itunes:summary>
+		<itunes:summary>A podcast where some episodes are open and others need authorization. This is an example on how you can put
+		authorization on some or all episodes in the same podcast channel, and still follow the RSS standard.
+		</itunes:summary>
 		<itunes:type>episodic</itunes:type>
 		<itunes:owner>
 			<itunes:name>Yngve Vindal Eriksen</itunes:name>
