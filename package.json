@@ -5,8 +5,7 @@
   "main": "dist/index.js",
   "type": "commonjs",
   "scripts": {
-    "build_full": "tsc && copyfiles -f ./src/files/*.* ./dist/files",
-    "build": "tsc && copyfiles -f -s ./src/files/*.* ./dist/files",
+    "build": "tsc && copyfiles -f ./src/files/*.* ./dist/files",
     "prestart": "npm run build",
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
