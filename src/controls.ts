@@ -1,5 +1,6 @@
 import fetch from "node-fetch";
 import {Response, Request} from "express";
+import * as fs from "fs";
 
 
 function downloadFile(filename: string, res: Response) {
@@ -9,19 +10,38 @@ function downloadFile(filename: string, res: Response) {
 
 
 export function protectedEpisode(req: Request, res: Response){
-    downloadFile('test_pod.mp3', res)
+    downloadFile('Furresangen.mp3', res)
 }
 
 export function nonProtectedEpisode(req: Request, res: Response){
-    downloadFile("lydspor.mp3",res);
+    downloadFile("ColorLine.mp3",res);
+}
+
+export function protectedEpisode2(req: Request, res: Response){
+    downloadFile("ColorLine.mp3",res);
 }
 
 export function rss(req: Request, res: Response){
-    downloadFile("rss.xml",res);
+    const filePath = `${__dirname}/files/rss.xml`;
+    fs.exists(filePath, function (exists) {
+        if (exists) {
+            res.writeHead(200, {
+                "Content-Type": "application/xml"
+            });
+            fs.createReadStream(filePath).pipe(res);
+            return;
+        }
+        res.writeHead(400, { "Content-Type": "text/plain" });
+        res.end("ERROR File does not exist");
+    });
 }
 
 export function profilePicture(req: Request, res: Response){
     downloadFile("profil.jpg",res);
+}
+
+export function episodePicture(req: Request, res: Response){
+    downloadFile("cover.png",res);
 }
 
 export async function registrationPage(req: Request, res: Response) {
@@ -43,7 +63,7 @@ export async function registrationPage(req: Request, res: Response) {
 
     res.send( `
         <div style="margin: 40px">
-        <h1>Podcast Test server</h1>
+        <h1>Podcast Mock server</h1>
         <p>This is a server for testing purposes. A real podcastserver would require registration to get the authorization code.</p>
         <p>Copy the code and paste it into field to open up protected episodes</p>
         <button onclick="myFunction()" id="btn">Copy code</button><br>

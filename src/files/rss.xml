@@ -2,7 +2,7 @@
 	<channel>
 		<title><![CDATA[Testpodden]]></title>
 		<description><![CDATA[A podcast where some episodes are open and others need authorization. This is an example on how you can put
-		authorization on some or all episodes in the same podcast channel, and still follow the RSS standard.]]></description>
+		authorization on some or all episodes in the same podcast channel, and still follow the RSS standard. This episode is on the mock server.]]></description>
 		<link>https://skvupp.com/</link>
 		<image>
 			<url>http://localhost:8080/profile</url>
@@ -30,9 +30,8 @@
 		<itunes:image href="http://localhost:8080/profile"/>
 		<item>
 			<title><![CDATA[Open episode]]></title>
-			<description><![CDATA[<p>A closed episode</p>]]></description>
-			<link>http://localhost:8080/</link><!-- Link to registration page -->
-			<itunes:protected>Yes</itunes:protected><!-- Property added tells the app reader this episode is protected -->
+			<description><![CDATA[<p>You might have an open episode on the same channel as closed episodes</p>]]></description>
+			<link>http://localhost:8080/</link>
 			<guid isPermaLink="false">e7b49dbc-43b1-46d6-9a74-c1a92c920dd0</guid>
 			<dc:creator><![CDATA[Yngve Vindal Eriksen]]></dc:creator>
 			<pubDate>Fri, 13 May 2022 03:00:09 GMT</pubDate>
@@ -40,15 +39,15 @@
 			<itunes:summary>Free and open episode</itunes:summary>
 			<itunes:explicit>No</itunes:explicit>
 			<itunes:duration>3480</itunes:duration>
-			<itunes:image href="http://localhost:8080/profile"/>
+			<itunes:image href="http://localhost:8080/episode"/>
 			<itunes:season>1</itunes:season>
 			<itunes:episode>1</itunes:episode>
-			<itunes:episodeType>full</itunes:episodeType>
+			<itunes:episodeType>full</itunes:episodeType><!-- Ordinary episode -->
 		</item>
 		<item>
 			<title><![CDATA[Protected episode]]></title>
 			<description><![CDATA[<p>A protected episode</p>]]></description>
-			<link>http://localhost:8080/</link>
+			<link>http://localhost:8080/</link><!-- This link leads you to the page where you can register to get authorization token. This link identifies the authorization i podcastplayer -->
 			<guid isPermaLink="false">e7b49dbc-43b1-46d6-9a74-c1a92c920dd0</guid>
 			<dc:creator><![CDATA[Yngve Vindal Eriksen]]></dc:creator>
 			<pubDate>Fri, 13 May 2022 03:00:09 GMT</pubDate>
@@ -56,10 +55,26 @@
 			<itunes:summary>Closed episode. Need authorization</itunes:summary>
 			<itunes:explicit>No</itunes:explicit>
 			<itunes:duration>3480</itunes:duration>
-			<itunes:image href="http://localhost:8080/profile"/>
+			<itunes:image href="http://localhost:8080/episode"/>
 			<itunes:season>1</itunes:season>
 			<itunes:episode>2</itunes:episode>
-			<itunes:episodeType>protected</itunes:episodeType>
+			<itunes:episodeType>protected</itunes:episodeType><!-- The player need authorization -->
+		</item>
+		<item>
+			<title><![CDATA[Another protected episode]]></title>
+			<description><![CDATA[<p>Closed episode. Need authorization. Use the same episode link and authorization as the protected episode above</p>]]></description>
+			<link>http://localhost:8080/</link><!-- The same link as the protected episode above -->
+			<guid isPermaLink="false">e7b49dbc-43b1-46d6-9a74-c1a92c920dd0</guid>
+			<dc:creator><![CDATA[Yngve Vindal Eriksen]]></dc:creator>
+			<pubDate>Fri, 13 May 2022 03:00:09 GMT</pubDate>
+			<enclosure url="http://localhost:8080/protected2" type="audio/mpeg"/>
+			<itunes:summary>Closed episode. Need authorization. Use the same episode link and authorization as the protected episode above</itunes:summary>
+			<itunes:explicit>No</itunes:explicit>
+			<itunes:duration>3480</itunes:duration>
+			<itunes:image href="http://localhost:8080/episode"/>
+			<itunes:season>1</itunes:season>
+			<itunes:episode>3</itunes:episode>
+			<itunes:episodeType>protected</itunes:episodeType><!-- The player need authorization -->
 		</item>
 	</channel>
 </rss>
